@@ -18,6 +18,8 @@ public class HelloController {
     private BookProperties book;
     @Autowired
     private CounterService counterService;
+    @Autowired
+    private DiscoveryClient discoveryclient;
 
     @RequestMapping("/hello/{name}")
     public String index(@PathVariable String name) {
@@ -25,6 +27,6 @@ public class HelloController {
 //        System.out.println(name);
 //        System.out.println(book.getAuthor()+" "+book.getName()+" "+book.getDesc());
 //        System.out.println(book.getA()+" "+book.getB()+" "+book.getC());
-        return "你好 springcloud";
+        return "你好 "+name;
     }
 }
