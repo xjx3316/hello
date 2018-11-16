@@ -32,9 +32,9 @@ public class HelloController {
     public String index() throws Exception {
         ServiceInstance instance = client.getLocalServiceInstance();
         //让处理线程等上几秒钟
-//        int sleepTime = new Random().nextInt(3000);
-//        LOG.info("sleepTime: "+sleepTime);
-//        Thread.sleep(sleepTime);
+        int sleepTime = new Random().nextInt(3000);
+        LOG.info("sleepTime: "+sleepTime);
+        Thread.sleep(sleepTime);
 
         LOG.info("/hello, host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
         return "hello springcloud";
