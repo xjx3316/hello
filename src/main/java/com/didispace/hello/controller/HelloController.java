@@ -32,7 +32,7 @@ public class HelloController {
     public String index() throws Exception {
         ServiceInstance instance = client.getLocalServiceInstance();
         //让处理线程等上几秒钟
-        int sleepTime = new Random().nextInt(3000);
+        int sleepTime = new Random().nextInt(1000);
         LOG.info("sleepTime: "+sleepTime);
         Thread.sleep(sleepTime);
 
